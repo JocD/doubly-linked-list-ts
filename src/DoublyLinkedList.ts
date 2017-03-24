@@ -70,6 +70,28 @@ export class DoublyLinkedList<T> {
         return this;
     }
 
+    copy(start: number = 0): DoublyLinkedList<T> {
+        const newList = new DoublyLinkedList<T>();
+        let currentNode = this.node(start) as Node<T>;
+
+        while(currentNode !== this._tail){
+            let data: T = currentNode.data();
+            newList.append(data);
+            currentNode = currentNode.next();
+        }
+
+        return newList;
+    }
+
+    /**
+     * Prepend new value at index. Set new value to be head
+     * */
+    prependNewHead(data: T, index): DoublyLinkedList<T> {
+        const newList = this.copy(index);
+        newList.prepend(data);
+        return newList;
+    }
+
     /**
      * Add a value to the end of the list
      * */

@@ -21,6 +21,16 @@ export class Node<T> {
         return this._prev;
     }
 
+    setNext(node: Node<T>): Node<T> {
+        this._next = node;
+        return node;
+    }
+
+    setPrev(node: Node<T>): Node<T>{
+        this._prev = node;
+        return node;
+    }
+
     prepend(node: Node<T>): Node<T> {
         const left = this._prev;
         const right = this;

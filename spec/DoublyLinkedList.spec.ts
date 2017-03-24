@@ -56,6 +56,24 @@ describe('Doubly Linked List', () => {
             expect(list.node(i).data()).to.equal(data[i]);
         }
     });
+    it('copy', () => {
+        for (let i = data.length - 1; i >= 0; i--) {
+            list.prepend(data[i]);
+        }
+        const copy = list.copy();
+        for (let i = 0; i < data.length; i++) {
+            expect(copy.node(i).data()).to.equal(list.node(i).data());
+        }
+    });
+    it('prependNewHead', () => {
+        for (let i = data.length - 1; i >= 0; i--) {
+            list.prepend(data[i]);
+        }
+        const newList = list.prependNewHead('Node -1', 3);
+        expect(newList.node(0).data()).to.equal('Node -1');
+        expect(newList.node(1).data()).to.equal(data[3]);
+        expect(newList.node(2).data()).to.equal(data[4]);
+    });
     it('remove()', () => {
         for (let i = 0; i < data.length; i++) {
             list.append(data[i]);
