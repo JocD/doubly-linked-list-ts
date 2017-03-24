@@ -93,20 +93,18 @@ export class DoublyLinkedList<T> {
 
     /** Remove a value from the beginning of the list */
     removeHead() {
-        const head = this.head();
-        if (head) {
-            return head.remove();
+        if (this._size === 0) {
+            return null;
         }
-        return null;
+        return this.remove(0);
     }
 
     /** Remove a value from the end of the list */
     removeTail() {
-        const tail = this.tail();
-        if (tail) {
-            return tail.remove();
+        if (this._size === 0) {
+            return null;
         }
-        return null;
+        return this.remove(this._size - 1);
     }
 }
 

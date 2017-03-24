@@ -73,13 +73,17 @@ describe('Doubly Linked List', () => {
             list.append(data[i]);
         }
 
+        expect(list.size()).to.equal(5);
         expect(list.removeHead().data()).to.equal(data[0]);
+        expect(list.size()).to.equal(4);
     });
     it('removeTail()', () => {
         for (let i = 0; i < data.length; i++) {
             list.append(data[i]);
         }
 
+        expect(list.size()).to.equal(5);
         expect(list.removeTail().data()).to.equal(data[4]);
+        expect(list.size()).to.equal(4);
     });
 });

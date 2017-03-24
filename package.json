@@ -1,6 +1,6 @@
 {
   "name": "doubly-linked-list-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Doubly Linked List build with Typescript",
   "main": "./dist/DoublyLinkedList.js",
   "types": "./dist/DoublyLinkedList.d.ts",
