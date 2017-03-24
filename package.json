@@ -1,14 +1,15 @@
 {
-  "name": "doubly-linked-list",
+  "name": "doubly-linked-list-ts",
   "version": "1.0.0",
   "description": "Doubly Linked List build with Typescript",
-  "main": "index.js",
+  "main": "./dist/DoublyLinkedList.js",
   "scripts": {
-    "test": "mocha -r ts-node/register spec/**/*.spec.ts"
+    "test": "mocha -r ts-node/register spec/**/*.spec.ts",
+    "install": "tsc"
   },
   "keywords": [
-    "double",
-    "linked-list"
+    "doubly linked list",
+    "linked list"
   ],
   "author": "Specless",
   "license": "ISC",
@@ -18,5 +19,8 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "ts-node": "^2.1.0"
+  },
+  "dependencies": {
+    "typescript": "^2.2.1"
   }
 }
