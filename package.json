@@ -1,8 +1,9 @@
 {
   "name": "doubly-linked-list-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Doubly Linked List build with Typescript",
   "main": "./dist/DoublyLinkedList.js",
+  "types": "./dist/DoublyLinkedList.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register spec/**/*.spec.ts",
     "install": "tsc"
